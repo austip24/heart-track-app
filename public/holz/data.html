@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Heart App - Account</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Import jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link href="./stylesheets/holz.css" rel="stylesheet">
+  <script src="./javascripts/data.js"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+		<li><a href="account.html">Home</a></li>
+		<li class="divider"></li>
+		<li><a href="#!" id="signout">Sign out</a></li>
+    <li class="divider"></li>
+    <li><a href="update.html">Update</a></li>
+	</ul>
+	<nav>
+		<div class="nav-wrapper blue-grey darken-2">
+			<a href="account.html" class="brand-logo left"><img id="logo" src="images/heart.png"><span id="name">Heart</span></a>
+			<ul class="right ">
+				<!-- Dropdown Trigger -->
+	      <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i class="material-icons">more_vert</i></a></li>
+			</ul>
+		</div>
+	</nav>
+  <h5>Sensor Data of <span id="deviceIDTitle"> ID </span></h5>
+  <div id="sensorData"></div>
+  <div id="MAXMIN"></div>
+  <div class='red-text text-darken-2' id="error"></div>
+</body>
+  
+  <!-- Initialize dropdown menu in materialize -->
+  <script>
+    $('.dropdown-trigger').dropdown();
+  </script>
+</html>

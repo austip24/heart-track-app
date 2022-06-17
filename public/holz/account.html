@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HeartTrack - Account</title>
+
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Import jQuery -->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  
+  <link href="./stylesheets/holz.css" rel="stylesheet">
+  <script src="./javascripts/account.js"></script>
+  <script src="./javascripts/signout.js"></script>
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+  <!-- Dropdown Structure -->
+  <ul id='dropdown1' class='dropdown-content'>
+		<li><a href="account.html">Home</a></li>
+		<li class="divider"></li>
+    <li><a href="update.html">Update</a></li>
+    <li class="divider"></li>
+    <li><a href="user_weekly.html">Weekly View</a></li>
+    <li class="divider"></li>
+    <li><a href="user_day.html">Day View</a></li>
+    <li class="divider"></li>
+		<li><a href="#!" id="signout">Sign out</a></li>
+	</ul>
+	<nav>
+		<div class="nav-wrapper blue-grey darken-2">
+			<a href="account.html" class="brand-logo left"><img id="logo" src="images/heart.png"><span id="name">Heart</span></a>
+			<ul class="right ">
+				<!-- Dropdown Trigger -->
+	      <li><a class='dropdown-trigger btn' href='#' data-target='dropdown1'><i class="material-icons">more_vert</i></a></li>
+			</ul>
+		</div>
+	</nav>
+
+  <!-- "main" account information -->
+	<div class="row" id="main">
+		<div class="col s12 m12">
+			<ul class="collection with-header">
+				<li class="collection-header">
+					<h5>Account Information</h5>
+				</li>
+				<li class="collection-item">Email: <span id="email"></span></li>
+				<li class="collection-item">Name: <span id="fullName"></span></li>
+				<li class="collection-item">Last Access: <span id="lastAccess"></span></li>
+        <li class="collection-item">Current Physician: <span id="currentPhysician"></span></li>
+
+        <!-- Physician choice -->
+        <label>Physician:</label>
+          <li class="collection-item input-field col s12" id="addPhysicianForm">
+            <select style="display: block" id="physChoice">
+              <option value="" disabled selected>Choose Physician</option>
+            </select>
+            <button id="registerPhysician" class="waves-effect waves-light btn">
+              Choose
+            </button>
+          </li>
+				
+      </ul>
+      
+
+			<ul class="collection with-header" id="devices">
+				<li class="collection-header">
+					<h5>Devices</h5>
+				</li>
+				<li class="collection-item" id="addDeviceForm">
+					<label for="deviceId">New Device ID:</label>
+					<input type="text" id="deviceId" name="deviceId" col="30">
+					<button id="registerDevice" class="waves-effect waves-light btn">Register</button> 
+					<button id="cancel" class="waves-effect waves-light btn">Cancel</button> 
+				</li>
+				<li class="collection-item" id="addDeviceControl"><a href="#!" id="addDevice">Add Device</a></li>
+    
+			</ul>
+  <!--
+      			<ul class="collection with-header">
+				<li class="collection-header">
+					<h5>Data Collection Schedule</h5>
+				</li>
+				<li class="collection-item">
+					<label for="startTime">Hour you want collections to start(0-23):</label>
+					<input type="text" id="startTime" name="startTime" col="30">
+					<label for="endTime">Hour you want collections to end(0-23):</label>
+					<input type="text" id="endTime" name="endTime" col="30">
+					<label for="interval">Interval between collections(minutes):</label>
+					<input type="text" id="interval" name="interval" col="30">
+					<button id="updateSchedule" class="waves-effect waves-light btn">Update Schedule</button>
+				</li>
+			</ul>
+      -->
+	  </div>
+	</div>
+    
+  <div class='red-text text-darken-2' id="error"></div>
+  </body>
+  
+  <!-- Initialize dropdown menu in materialize -->
+  <script>
+    $('.dropdown-trigger').dropdown();
+  </script>
+</html>
