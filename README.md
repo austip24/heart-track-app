@@ -1,5 +1,6 @@
-# Heart_App
+# Heart_App 
 
+Note (6-17-2022) - No longer open
 
 Instructions for using the /data POST endpoint
 
@@ -17,17 +18,9 @@ The "data" attribute should be formatted like so. Note that the type of "data" v
 
 "data": "{ "bpm": "72", 
           "spO2": "89.4658",
-          "apikey": "GNO4kO0KwgDZ5frrnql6NWyT96yBV6Li"
+          "apikey": "some-api-key"
         }"
         
-The above apikey is invalid. Below is a valid apikey that can be used to test the endpoint:
-
-          valid api key: rYoqIdTKtL5OCHiWgdGmoIjlc8P24Oht
-
-Below is a valid value for the "coreid" attribute:
-
-          valid coreid(deviceid): 3e002d000147393033373334
-
 The other two fields, "event" and "published_at", can be whatever the user specifies them to be.
 
 Here is a valid request that can be made to the server:
@@ -38,10 +31,10 @@ Here is a valid request that can be made to the server:
   
   "data": "{ "bpm": "50", 
           "spO2": "90",
-          "apikey": "rYoqIdTKtL5OCHiWgdGmoIjlc8P24Oht"
+          "apikey": "some-api-key"
         }",
         
-  "coreid": "3e002d000147393033373334",
+  "coreid": "some-randomized-id",
   
   "published_at": "right now"
   
